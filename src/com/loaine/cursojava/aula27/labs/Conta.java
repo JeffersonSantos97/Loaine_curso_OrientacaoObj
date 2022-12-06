@@ -2,35 +2,28 @@ package com.loaine.cursojava.aula27.labs;
 
 public class Conta {
 
-    int numConta;
+    int numConta = 123456;
 
-    double chequeEspecial = 150.00;
+    double chequeEspecial = 500.00;
 
     boolean status;
-    double saldo = 0; // saldo já começa com limite + o saldo. Mas como o saldo começa como 0, então o saldo primeiramente é o limite
+    double saldo = 0.0; // saldo já começa com limite + o saldo. Mas como o saldo começa como 0, então o saldo primeiramente é o limite
 
     // boolean status = true;
 
 
-    public Conta() {
-
-
-    }
-
-
-    // verifica cheque especial
 
     // resposta cheque Especial
 
-    boolean respostaCheque(String resposta) {
+    void respostaCheque(String resposta) {
 
 
         if(resposta.equalsIgnoreCase("y")) {
 
-            return status = true;
+            status = true;
         } else  {
 
-            return status = false;
+             status = false;
         }
 
     }

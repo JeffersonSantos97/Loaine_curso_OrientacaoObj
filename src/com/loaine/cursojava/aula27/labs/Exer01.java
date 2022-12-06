@@ -19,9 +19,10 @@ public class Exer01 {
 
         lamp.estadoLampada();
 
-        lamp.ligar();
+        lamp.mudarEstado();
 
         lamp.estadoLampada();
+
 
 
 

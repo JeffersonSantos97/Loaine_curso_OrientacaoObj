@@ -7,23 +7,19 @@ public class Lampada {
     int voltagem;
     double preco;
     String[] tipos;
-    boolean conector = true;
+    boolean conector;
 
-    // Instancie o contrutor Lampada
-        public Lampada() {
-
-        }
 
     // Método para ligar ( colocar o conector como acesso ) o true repesenta ligado
-        boolean ligar() {
+        void ligar() {
 
-            return conector = true;
+            conector = true;
         }
 
         // Método para desligar ( colocar o conector como desligado ) o false representa desligado
-        boolean desligar() {
+        void desligar() {
 
-           return  conector = false;
+            conector = false;
         }
 
         // método para mostrar o estado da Lampda
@@ -31,14 +27,27 @@ public class Lampada {
 
             // se conector estiver no true ( vai retornar a frase de que está LIGADA )
 
-            if(conector == true) {
+            if(conector) {
 
                 System.out.println("Ligada");
             }
             // se o conector estiver no false ( vai retornar a frase de que a lampada está DESLIGADA )
-            else if(conector == false){
+            else{
 
                 System.out.println("Desligada");
+            }
+        }
+    // Mudar o estado da Lampada
+        void mudarEstado() {
+                // Se a lampada estiver ligada, ela passa a ficar desligada quando acionar esse metodo
+            if(conector) {
+
+                desligar();
+            }
+            // se a lampada estiver desligada, ela passsa a fica ligada quando acionar essse metodo
+            else {
+
+                ligar();
             }
         }
 }
